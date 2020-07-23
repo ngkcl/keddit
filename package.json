@@ -1,0 +1,27 @@
+{
+  "name": "keddit",
+  "version": "1.0.0",
+  "description": "Cross Platform Reddit Client",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngkcl/keddit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngkcl/keddit/issues"
+  },
+  "homepage": "https://github.com/ngkcl/keddit#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-packager": "^15.0.0"
+  }
+}
