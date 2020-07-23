@@ -44,16 +44,16 @@ function createWindow() {
     // (created by webpack) to load in dev and production
     if (dev && process.argv.indexOf('--noDevServer') === -1) {
         indexPath = url.format({
-        protocol: 'http:',
-        host: 'localhost:8080',
-        pathname: 'index.html',
-        slashes: true
+            protocol: 'http:',
+            host: 'localhost:8080',
+            pathname: 'index.html',
+            slashes: true
         });
     } else {
         indexPath = url.format({
-        protocol: 'file:',
-        pathname: path.join(__dirname, 'dist', 'index.html'),
-        slashes: true
+            protocol: 'file:',
+            pathname: path.join(__dirname, 'dist', 'index.html'),
+            slashes: true
         });
     }
     
@@ -64,9 +64,9 @@ function createWindow() {
     mainWindow.once('ready-to-show', () => {
         mainWindow.show()    // Open the DevTools automatically if developing
         if (dev) {
-        installExtension(REACT_DEVELOPER_TOOLS)
-            .catch(err => console.log('Error loading React DevTools: ', err))
-        mainWindow.webContents.openDevTools()
+            installExtension(REACT_DEVELOPER_TOOLS)
+                .catch(err => console.log('Error loading React DevTools: ', err))
+            mainWindow.webContents.openDevTools()
         }
     })
 
