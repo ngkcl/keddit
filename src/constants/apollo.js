@@ -1,0 +1,1 @@
+export const REDDIT_API_URL = 'https://gql.reddit.com/'

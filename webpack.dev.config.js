@@ -6,6 +6,11 @@ const { spawn } = require('child_process');
 const defaultInclude = path.resolve(__dirname, 'src');
 
 module.exports = {
+    externals: {
+        'fs': 'top.require(\'fs\')',
+        'path': 'top.require(\'path\')',
+        'electron': 'top.require(\'electron\')',
+    },
     module: {
         rules: [
             {
@@ -14,7 +19,7 @@ module.exports = {
                 include: defaultInclude
             },
             {
-                test: /\.jsx?$/,
+                test: /\.js?$/,
                 use: [{ loader: 'babel-loader' }],
                 include: defaultInclude
             },

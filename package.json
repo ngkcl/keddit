@@ -8,7 +8,9 @@
     "start": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js --mode development",
     "build": "webpack --config webpack.build.config.js --mode production",
     "package": "npm run build",
-    "postpackage": "electron-packager ./ --out=./builds"
+    "postpackage": "electron-packager ./ --out=./builds",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,11 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "babili-webpack-plugin": "^0.1.2",
     "css-loader": "^3.6.0",
