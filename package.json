@@ -10,7 +10,8 @@
     "package": "npm run build",
     "postpackage": "electron-packager ./ --out=./builds",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "xvfb-maybe electron-mocha ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,11 @@
   },
   "homepage": "https://github.com/ngkcl/keddit#readme",
   "dependencies": {
+    "mocha": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "xvfb-maybe": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -40,6 +43,7 @@
     "css-loader": "^3.6.0",
     "electron": "^9.1.1",
     "electron-devtools-installer": "^3.1.1",
+    "electron-mocha": "^9.0.1",
     "electron-packager": "^15.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
